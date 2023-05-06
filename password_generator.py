@@ -9,4 +9,4 @@ def pwd_generator(string_length):
 
     return pwd
 
-pwd_generator(20)
+print(pwd_generator(20))
