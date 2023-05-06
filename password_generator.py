@@ -2,13 +2,11 @@ import random
 import string
 import secrets
 
-string_length = 20
+def pwd_generator(string_length):
+    '''Takes password length as an integer and generates a secure
+    combination of letters numbers that are suitable for passwords.'''
+    pwd = ''.join(secrets.choice(string.ascii_letters + string.digits + string.punctuation)for x in range(string_length))
 
-#Password recommendation with a combination of uppercase letters lower case letters, and punctuation
-pwd = ''.join(secrets.choice(string.ascii_letters + string.punctuation)for x in range(string_length))
+    return pwd
 
-#Password recommendation with a combination of uppercase and lowercase letters, special characters and numbers
-pwd1 = ''.join(secrets.choice(string.ascii_letters + string.digits + string.punctuation)for x in range(string_length))
-
-print(pwd)
-print(pwd1)
+pwd_generator(20)
